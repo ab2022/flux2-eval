@@ -1,0 +1,84 @@
+$ python3 run_bench.py
+=== Parallel Benchmark (4 GPUs x 10 prompts) ===
+Image:      /home/azureuser/flux2-eval/src_images/NY_hat_1.png
+Prompts:    40 from /home/azureuser/flux2-eval/sample_prompts.txt
+Num steps:  2
+Output:     /home/azureuser/flux2-eval/serial_bench/results
+
+--- Phase 1: Warming up all GPUs (sequential, pinned) ---
+
+  GPU 0: 12.80s | cache=False | HTTP 200
+  GPU 1: 10.84s | cache=False | HTTP 200
+  GPU 2: 11.40s | cache=False | HTTP 200
+  GPU 3: 11.09s | cache=False | HTTP 200
+
+  image_hash: bbd58d807766a5982adbefa624645320c2fed0e802a495e3318da410f0fe8f2c
+  All 4 GPUs warmed up.
+
+--- Phase 2: Benchmark (4 parallel x 10 serial, pinned) ---
+
+  [W3] 1/10 | 1.60s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'SCAR'
+  [W2] 1/10 | 2.02s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'H'
+  [W1] 1/10 | 2.06s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'SEA'
+  [W0] 1/10 | 2.09s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'LA'
+  [W3] 2/10 | 1.49s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'Cin'
+  [W1] 2/10 | 2.29s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'T'
+  [W2] 2/10 | 2.37s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'Nash'
+  [W0] 2/10 | 2.33s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'Bills'
+  [W3] 3/10 | 2.17s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'NE'
+  [W2] 3/10 | 2.25s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'Jets'
+  [W1] 3/10 | 2.34s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'Rb'
+  [W0] 3/10 | 2.31s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'NC'
+  [W3] 4/10 | 2.33s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'Rams'
+  [W2] 4/10 | 2.04s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'DC'
+  [W0] 4/10 | 2.80s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'NYG'
+  [W1] 4/10 | 2.88s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'TOR'
+  [W3] 5/10 | 2.83s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'Colts'
+  [W2] 5/10 | 2.66s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'Hawk'
+  [W1] 5/10 | 2.79s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'SD'
+  [W0] 5/10 | 2.86s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'SF'
+  [W3] 6/10 | 2.82s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'MN'
+  [W2] 6/10 | 2.88s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'TB'
+  [W1] 6/10 | 2.91s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'Bos'
+  [W0] 6/10 | 2.91s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'DAL'
+  [W3] 7/10 | 2.91s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'Saints'
+  [W2] 7/10 | 2.89s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'AZ'
+  [W0] 7/10 | 2.88s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'Chiefs'
+  [W1] 7/10 | 2.96s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'Philly'
+  [W3] 8/10 | 2.96s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'M'
+  [W2] 8/10 | 2.90s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'Bears'
+  [W1] 8/10 | 2.85s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'St.L'
+  [W0] 8/10 | 2.93s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'MIA'
+  [W3] 9/10 | 2.93s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say 'W'
+  [W2] 9/10 | 2.65s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'Sox'
+  [W0] 9/10 | 2.74s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'DEN'
+  [W1] 9/10 | 2.82s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'Go'
+  [W3] 10/10 | 2.97s | GPU 3 | cache=True | HTTP 200 | Change the logo on the hat to say '$'
+  [W2] 10/10 | 2.41s | GPU 2 | cache=True | HTTP 200 | Change the logo on the hat to say 'VGK'
+  [W0] 10/10 | 2.18s | GPU 0 | cache=True | HTTP 200 | Change the logo on the hat to say 'GB'
+  [W1] 10/10 | 2.18s | GPU 1 | cache=True | HTTP 200 | Change the logo on the hat to say 'C++'
+
+========================================================================
+  Per-GPU Summary
+========================================================================
+
+Worker    GPU  Reqs  Total(s)   Avg(s)  Hits
+--------------------------------------------
+W0          0    10     26.04     2.60    10
+W1          1    10     26.07     2.61    10
+W2          2    10     25.07     2.51    10
+W3          3    10     25.00     2.50    10
+
+========================================================================
+  Overall Summary
+========================================================================
+
+Total requests:    40
+Errors (non-200):  0
+GPUs used:         4 (0, 1, 2, 3)
+Cache hits:        40/40
+Wall-clock time:   26.07s
+Throughput:        1.53 req/s
+Avg client time:   2.55s/req
+Results saved to:  /home/azureuser/flux2-eval/serial_bench/results/
+
